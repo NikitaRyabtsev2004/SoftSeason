@@ -1,0 +1,24 @@
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  flex: 1;
+  padding-left: 20px;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  padding: 40px;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    padding-left: 0;
+  }
+}

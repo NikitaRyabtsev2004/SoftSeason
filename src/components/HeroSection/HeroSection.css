@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.hero {
+  height: 100vh;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/009/720/843/non_2x/knitting-pattern-knitted-realistic-seamless-background-of-yellow-color-knit-texture-for-wallpapers-and-backgrounds-vector.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 30%;
+  filter: grayscale(90%);
+  z-index: -1;
+  mask-image: linear-gradient(to top,
+      white 50px,
+      transparent 200px);
+  -webkit-mask-image: linear-gradient(to top,
+      transparent 80px,
+      white 400px);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.76), rgba(255, 255, 255, 0.475));
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1,
+.hero p,
+.hero button {
+  transition: text-shadow 100ms ease-out;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 36px;
+  word-wrap: break-word;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background: linear-gradient(135deg, #ff4757, #ff6b6b);
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-button.primary {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+}
+
+.hero-button.primary a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-button.secondary {
+  background: linear-gradient(135deg, #4dabf7, #74c0fc);
+}
+
+.hero-button.secondary:hover {
+  background: linear-gradient(135deg, #339af0, #4dabf7);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .button-container {
+    min-height: 120px;
+  }
+}
